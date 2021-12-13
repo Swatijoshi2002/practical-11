@@ -2,35 +2,35 @@
 using namespace std;
 class mammals{
     public:
-    void display()
+    void display1()
     {
         cout<<"I am mammal"<<endl;
     }
 };
  class marine_animal{
     public:
-    void display1()
+    void display2()
     {
         cout<<"I am marine animal"<<endl;
     }
 };   
-class bluewhale:public mammals:public marine_animal{
+class bluewhale:public mammals,public marine_animal{
     public:
     void display3()
     {
-        cout<<"I belong to both"<<endl:
+        cout<<"I belong to both"<<endl;
     }
-}
+};
 int main()
 {
-  mammals obj;
-  marine_animal obj1;
+  mammals obj1;
+  marine_animal obj2;
   bluewhale obj3;
-  obj.display();
-  obj1.display();
-  obj2.display3();
+  obj1.display1();
+  obj2.display2();
+  obj3.display3();
   cout<<"calling using obj of bluewhale"<<endl;
-  obj2.mammals::display();
-  obj2.marine_animals::display1();
+  obj3.mammals::display1();
+  obj3.marine_animal::display2();
     
 }
